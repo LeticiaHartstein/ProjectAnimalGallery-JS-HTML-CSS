@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cloudflare.com">
+    <title>Document</title>
+</head>
+<body>
+    <div id="navBar">
+        <img src="assets/fish-solid.png">
+        <h1>The animal image galery</h1>
+    </div>
+    <script src="fetchData.js"></script>
+   <script>
+    requestImageToAPI("https://dog.ceo/api/breeds/image/random ", "message", "dog", 5);
+    requestImageToAPI("https://randomfox.ca/floof/", "image", "fox", 5  );
+    requestImageToAPI('https://animals.maxz.dev/api/fish/random', 'image', 'fish', 5);
+    requestImageToAPI('https://animals.maxz.dev/api/capybara/random', 'image', 'capybara', 5);
+    requestImageToAPI('https://animals.maxz.dev/api/rabbit/random', 'image', 'rabbit', 5);
+    requestImageToAPI('https://animals.maxz.dev/api/cat/random', 'image', 'cat', 5);
+
+
+   </script>
+</body>
+</html>

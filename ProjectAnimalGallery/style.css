@@ -1,0 +1,115 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body
+{
+    background: radial-gradient(circle, rgba(46, 42, 89, 1) 0%, rgba(18, 37, 54, 1) 37%, rgba(0, 0, 0, 1) 100%);
+    animation: bgColorsMovement 30s ease infinite;
+    background-size:600% 600%;
+
+}
+div
+{
+
+    width:98.5%;
+    display: block ;
+    margin: 0 auto;
+}
+#navBar
+{
+    width: 100%;
+    height: 12vh;
+    margin-bottom: 10vh;
+    display: flex;
+    flex-direction: row;
+    font-family: Arial;
+    font-style: bold;
+    color:#FFD43B;
+    gap: 1vw;
+    background-color: #111111;
+
+}
+#navBar img
+{
+    height: 9vh;
+    width: auto;
+    animation: fishIcon 5s ease 1; 
+}
+.gallery {  
+        margin-top: 10vh;
+    margin: 12vh,12vh;
+
+    align-items: flex-start;
+    text-align: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    display: flex;
+    gap: 1vh;
+    padding-bottom: 10px;
+    background: #111111;
+    border:10px solid transparent;
+    border-radius: 10px;
+    transition: 0.5s;
+    box-shadow:-8px -8px 16px rgba(35, 35, 35, 0.18),8px 8px 16px rgb(0, 0, 0);
+}          
+.gallery h1 
+{
+    
+
+    width: 100%;
+    font-family: Arial;
+    font-style: bold;
+    color:#f1f1f1;
+}
+.gallery hr
+{
+    width: 100%;
+    border: 1px solid #242124;
+}
+.gallery:hover
+{
+    transition: transform 0.3s ease-in-out;
+    box-shadow:0 0 0 2px #2563eb;
+
+}
+.gallery:hover h1 
+{
+    animation: fontColor 2s ease-in-out infinite;
+}
+.image {
+    width:12vw;
+    height:12vw ;
+    object-fit: cover;
+    border: 1px solid transparent;
+    border-radius: 10px;
+    box-shadow:-8px -8px 16px rgba(35, 35, 35, 0.18),8px 8px 16px rgb(0, 0, 0);
+
+}
+.image:hover{
+    box-shadow:  -10px 5px 14px rgba(37, 87, 144, 0.18),8px 8px 14px rgb(0, 0, 0);
+    transition: transform 0.3s ease-in-out;
+    transform: scale(105%);
+
+}
+@keyframes bgColorsMovement
+{
+  0%{ background-position:0% 50%; }
+  50%{ background-position:100% 50%; }
+  100%{ background-position:0% 50%;  }
+}
+@keyframes fontColor
+{
+  0%{ color:#2563eb }
+  50%{ color: #f1f1f1 }
+  100%{ color: #2563eb  }
+}
+@keyframes fishIcon
+{
+  0%{ transform: translateX(0) scale(1);}
+  55%{transform: translateX(70vw)  scale(-1);  }
+  70%{transform: scale(1);}
+  100%{ transform: translateX(0); }
+}
